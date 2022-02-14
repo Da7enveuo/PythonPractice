@@ -24,7 +24,6 @@ def main():
   variable_to_run_game = 1
   total_guesses_alotted = 8
   #Background helper to eliminate excess background when in fullscreen
-  #David 
   def bg_helper():
     t.setheading(90)
     t.penup()
@@ -43,7 +42,6 @@ def main():
     t.forward(325)
     t.end_fill()
   #Method to draw ellipse for the tongue
-  #David
   def draw():    
     # rad --> radius of arc 
     for i in range(1): 
@@ -51,7 +49,6 @@ def main():
       t.circle(4,90) 
       t.circle(4,90)
   #Method to draw ellipse for shoulders
-  #David
   def draw2():
     for i in range(1):
       t.pencolor('blue2')
@@ -61,13 +58,11 @@ def main():
       t.circle(24,90)
       t.end_fill()
   #Method to draw shoes
-  #David
   def draw3():     
     for i in range(2):  
       t.circle(6,90) 
       t.circle(6,90)
   #Function To draw grass lines
-  #Jacque
   def grass():
       t.pensize(3)
       t.pencolor('black')
@@ -84,7 +79,6 @@ def main():
       t.forward(5)
       t.end_fill()
   #Function to draw mountains
-  #Jacque
   def mountain():
       t.pensize(4)
       t.pencolor('black')
@@ -100,7 +94,6 @@ def main():
       t.penup()
       t.end_fill()
   #Function to draw white mountain tops
-  #Jacque
   def mountain_tops():
       t.pensize(3)
       t.pencolor('black')
@@ -116,7 +109,6 @@ def main():
       t.penup()
       t.end_fill()
   #Function to draw the head
-  #David
   def dead_head():
       t.setheading(180)
       t.tracer(0,0)
@@ -182,7 +174,6 @@ def main():
       t.end_fill()
       t.update()
   #Body function
-  #David
   def dead_body():
       t.tracer(0,0)
       t.setheading(90)
@@ -261,7 +252,6 @@ def main():
       t.forward(90)
       t.update()
   #Left arm function
-  #David
   def dead_right_arm():
       t.penup()
       t.goto(35, 25)
@@ -295,7 +285,6 @@ def main():
       t.end_fill()
       t.update()
   #Right arm function
-  #David
   def dead_left_arm():
       t.penup()
       t.goto(5, 25)
@@ -329,7 +318,6 @@ def main():
       t.end_fill()
       t.update()
   #Left leg function
-  #David
   def dead_left_leg():
       t.tracer(0,0)
       t.penup()
@@ -376,7 +364,6 @@ def main():
       t.penup()
       t.update()
   #Right leg function
-  #David
   def dead_right_leg():
       t.tracer(0,0)
       t.penup()
@@ -419,7 +406,6 @@ def main():
       t.end_fill()
       t.penup()
       t.update()
-  #David
   def right_shirt():
       t.pensize(3)
       t.penup()
@@ -438,7 +424,6 @@ def main():
       t.penup()
       t.forward(5)
       t.end_fill()
-  #David
   def left_shirt():
       t.pensize(3)
       t.penup()
@@ -458,7 +443,6 @@ def main():
       t.forward(5)
       t.end_fill()
   # Lines on screen function
-  # David
   def lines():
       t.setheading(0)
       t.penup()
@@ -493,7 +477,6 @@ def main():
       t.write(num_guesses, font=stle, align="center")
       t.penup()
   #Quit function
-  #Brandon
   def quit():
       print('Are you sure you would like to quit? (Y/N ONLY): ')
       leave = str(input())
@@ -509,11 +492,9 @@ def main():
       else:
           print('I didn\'t quite get that.')
   #Split function
-  #Brandon
   def split(the_length): 
       return [char for char in the_length]
   #Rope lines
-  #Jacque
   def rope_lines():
       t.penup()
       t.setheading(135)
@@ -777,7 +758,6 @@ def main():
   t.write(' '.join(the_length), font=style, align="center")
 
   #While statement for the game
-  #Brandon
   while variable_to_run_game == 1:
     name = str(input('Hello, welcome to Hangman!\nLets start by getting your name: '))
     if name == '1':
@@ -794,7 +774,6 @@ def main():
       while leave_code_variable != 1:
           state_of_user = str(input('Hi ' + name + ', how are you doing today?: '))
           #Introduction if statement############################################################################################################################################################################################################################################################
-          #Brandon
           if state_of_user in good_states:
               print('Well I\'m glad you\'re doing', state_of_user + '.')
               print('Lets get started!')
@@ -827,7 +806,6 @@ def main():
               print('I don\'t quite understand that.')
             
   #Print statment to open the other tab
-  #Brandon
       while variable_for_continuing_to_game != 0:
           ready = str(input('Are you ready to continue?: '))
           if ready in yes:
@@ -846,7 +824,6 @@ def main():
           else:
               print('I\'m sorry I didn\'t understand that.')
   #Hangman code
-  #Brandon
       already_guessed = []
       already_guessed_right = []
       if guesses_left == 0:
@@ -972,7 +949,6 @@ def main():
           t.pendown()
           t.write(' '.join(secret_word), font=style, align="center")
           return win
-#David
 question_count = 1
 style = ('Courier', 100, 'bold')
 question_answer = str()
@@ -990,7 +966,6 @@ while question_count == 1:
   elif a == 'W':
     t.write("WINNER", font=style, align="center")
   #to determine if they quit or not
-  #Jacque
   if a == 'q':
     question_count = 100
     break
